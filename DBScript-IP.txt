@@ -1,0 +1,129 @@
+DROP SCHEMA IF EXISTS `IM-Project`; 
+
+CREATE SCHEMA `IM-project`; 
+
+use `IM-Project`; 
+
+SET FOREIGN_KEY_CHECKS = 0; 
+
+DROP TABLE IF EXISTS `job_details`; 
+
+CREATE TABLE `job_details` ( 
+
+  `id` int(11) NOT NULL AUTO_INCREMENT, 
+
+  `jobName` varchar(128) DEFAULT NULL, 
+
+  `jobDescription` varchar(1000) DEFAULT NULL, 
+
+  `projectName` varchar(50) DEFAULT NULL, 
+
+  `man_skills` varchar(100), 
+
+  `op_skills` varchar(200), 
+
+  `location` varchar(100), 
+
+  `empBand` varchar(20), 
+
+  `empExp` float(2), 
+
+  `openPosition` int(5), 
+
+  `cpEmail` varchar(30), 
+
+  `cpContact` varchar(20), 
+
+  PRIMARY KEY (`id`) 
+
+); 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+DROP TABLE IF EXISTS `employee`; 
+
+
+create table employee(
+
+id int(11) , 
+first_name varchar(45), 
+last_name varchar(45),
+password varchar(12),
+skills varchar(100),
+dob date,
+qualification varchar(10),
+experience int(2),
+gender varchar(10), 
+contact varchar(15), 
+email varchar(45),
+Primary key(id)
+);
+
+; 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+Create table `emp_job`( 
+
+ `job_id` int(11), 
+
+  `emp_id` int(11),
+
+  Primary key(`job_id`,`emp_id`),
+ 
+  constraint `FK_ip_1` 
+
+  foreign key(`job_id`) references `job_details` (`id`), 
+
+  constraint `FK_ip_2` 
+
+  foreign key(`emp_id`) 
+
+  references `employee`(`id`) 
+
+); 
+
+Drop table if exists empProfile;
+
+create table empProfile(
+
+profile_id int(11),
+profile longblob,
+emp_id int(11),
+constraint `FK_ip` 
+foreign key(`emp_id`) references `employee` (`id`) 
+
+);
+ 
