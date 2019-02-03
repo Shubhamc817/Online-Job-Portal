@@ -1,4 +1,4 @@
-For setting up the FSD-IP code, Please do import the same in Eclipse by going to File->Import -> Existing Maven Projet;
+For setting up the Online Job Portal code, Please do import the same in Eclipse by going to File->Import -> Existing Maven Projet;
 
 Before start in up, i would recommend you Please set up with the DB connectivities.
 
@@ -6,7 +6,7 @@ The DB schema FSD-IP only, has been used, The sql script has been added for your
 MySQL workbench and execute.
 
 
-FSD-IP - Profile updation project has been developed keeping in mind to get all the functionality as below-
+FSD-IP - Online Job Search Portal project has been developed keeping in mind to get all the functionality as below-
 
 Admin - For Admin,for simplicity, the credentials are set default - id- admin and password also - admin
 
